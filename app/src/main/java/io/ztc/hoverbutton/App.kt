@@ -23,15 +23,17 @@ class App : Application() {
             .setY(Screen.height, 0.3f)
             .setMoveType(MoveType.slide, -70, -70)
             .setMoveStyle(500, BounceInterpolator())
-            .setFilter(true, A_Activity::class.java, C_Activity::class.java)
+            .setFilter(true, A_Activity::class.java)
             .setViewStateListener(mViewStateListener)
             .setPermissionListener(mPermissionListener)
             .setDesktopShow(true)
             .build()
         imageView.setOnClickListener {
-            applicationContext.startActivity(
-                Intent(applicationContext, B_Activity::class.java)
-            )
+            val mIntent = Intent(applicationContext, A_Activity::class.java)
+            mIntent.addCategory(Intent.CATEGORY_LAUNCHER)
+            mIntent.action = Intent.ACTION_MAIN
+            mIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
+            startActivity(mIntent)
         }
     }
 

@@ -12,7 +12,6 @@ import java.util.*
 
 /**
  * 用于在内部自动申请权限
- * https://github.com/yhaolpz
  */
 class FloatActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {

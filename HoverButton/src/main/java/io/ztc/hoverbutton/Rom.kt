@@ -9,8 +9,6 @@ import java.io.IOException
 import java.io.InputStreamReader
 
 /**
- * Created by yhao on 2017/12/30.
- * https://github.com/yhaolpz
  */
 internal object Rom {
     @SuppressLint("QueryPermissionsNeeded")

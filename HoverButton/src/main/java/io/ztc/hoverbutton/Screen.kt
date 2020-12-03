@@ -3,8 +3,6 @@ package io.ztc.hoverbutton
 import androidx.annotation.IntDef
 
 /**
- * Created by yhao on 2017/12/23.
- * https://github.com/yhaolpz
  */
 object Screen {
     const val width = 0

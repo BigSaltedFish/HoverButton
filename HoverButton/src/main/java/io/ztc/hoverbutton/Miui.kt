@@ -86,6 +86,7 @@ internal object Miui {
             miui5 -> reqForMiui5(context)
             miui6, miui7 -> reqForMiui67(context)
             miui8, miui9 -> reqForMiui89(context)
+            else ->  reqForMiui89(context)
         }
         setResumedListener (object :ResumedListener{
             override fun onResumed() {
